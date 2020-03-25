@@ -10,7 +10,7 @@ class Pokemon {
 	public $resistance;
 
 
-	public function __construct ($name = "Rattata", $energyType = "normal", $hitpoints = "20", $health = "20", $attacks = "10", $weakness = "*", $resistance = null) {  
+	public function __construct ($name = "Rattata", $energyType = "normal", $hitpoints = "20", $health = "20", $attacks = "20", $weakness = "*", $resistance = null) {  
 	    $this->name = $name;
 	    $this->energyType = $energyType;
 	    $this->hitpoints = $hitpoints;
@@ -32,6 +32,9 @@ class Pokemon {
     	echo '<h3>' . $this->health . '</h3>';
     }
 
+    public function getAttacks () {
+    	echo '<h3>' . $this->attacks . '</h3>';
+    }
 }
 
 ?>
