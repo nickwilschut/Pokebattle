@@ -5,10 +5,9 @@ $Pickachu = new Pickachu(
 	$energyType = 'Energy', 
 	$hitpoints = '100', 
 	$health = '100', 
-	$attacks = array (
-		$Nuzzle,
-		$ThunderShock,
-	), 
+	$attacks = [
+		$ThunderShock
+	],
 	$weakness = 'water', 
 	$resistance = 'dark'
 );

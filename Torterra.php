@@ -5,24 +5,21 @@ $Torterra = new Torterra(
 	$energyType = 'Grass', 
 	$hitpoints = '120', 
 	$health = '120', 
-	/*$attacks = array (
-		"Nuzzle" => "20",
-		"Thunder Shock" => "40",
-	), */
-
 	$attacks = array (
-		$Nuzzle = array(
-			"damage" => "20",
-			"energyType" => "Normal", 
+		$MegaDrain = array(
+			$name = "MegaDrain",
+			$attacks = "40",
+			$energyType = "Grass", 
 		),
 
-		$ThunderShock = array(
-			"damage" => "40",
-			"energyType" => "Lightning", 
+		$LeafStorm = array(
+			$name = "LeafStorm",
+			$attacks = "130",
+			$energyType = "Grass", 
 		),
 	),
-	$weakness = 'water', 
-	$resistance = 'dark'
+	$weakness = 'fire', 
+	$resistance = 'normal'
 );
 
 class Torterra extends Pokemon {
@@ -31,6 +28,5 @@ class Torterra extends Pokemon {
 	    parent::__construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance);
 	}
 }
-
 
 ?>

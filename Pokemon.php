@@ -9,8 +9,7 @@ class Pokemon {
 	public $weakness;
 	public $resistance;
 
-
-	public function __construct ($name = "Rattata", $energyType = "normal", $hitpoints = "20", $health = "20", $attacks = "20", $weakness = "*", $resistance = null) {  
+	public function __construct ($name = "Rattata", $energyType = "normal", $hitpoints = "20", $health = "20", $attacks = "10", $weakness = "*", $resistance = null) {  
 	    $this->name = $name;
 	    $this->energyType = $energyType;
 	    $this->hitpoints = $hitpoints;
@@ -25,16 +24,42 @@ class Pokemon {
 	}
 
 	public function sayName () {
-        echo '<h2>' . $this->name . '</h2>';
+        echo '<p>' . $this->name . '</p>';
     }
 
     public function getHealth () {
-    	echo '<h3>' . $this->health . '</h3>';
+    	echo '<p>' . $this->health . '</p>';
     }
 
     public function getAttacks () {
-    	echo '<h3>' . $this->attacks . '</h3>';
+    	echo '<p>' . $this->energyType . ' ' . $this->attacks . '</p>';
     }
+
 }
+
+
+$Nuzzle = new Pokemon (
+	$name = "Nuzzle", 
+	$energyType = "20",
+	$attacks = "Normal", 
+);
+
+$ThunderShock = new Pokemon (
+	$name = "ThunderShock",
+	$attacks = "40",
+	$energyType = "Lightning", 
+);
+
+$MegaDrain = new Pokemon(
+	$name = "MegaDrain",
+	$attacks = "40",
+	$energyType = "Grass", 
+);
+
+$LeafStorm = new Pokemon(
+	$name = "LeafStorm",
+	$attacks = "130",
+	$energyType = "Grass", 
+);
 
 ?>

@@ -8,9 +8,8 @@ require 'Attacks.php';
 
 print_r('<pre>'. $Pickachu . '</pre>');
 print_r('<pre>'. $Torterra . '</pre>');
-print_r('<pre>'. $PokeAttacks . '</pre>');
+print_r('<pre>'. $Nuzzle . '</pre>');
 
-$Torterra->getAttacks();
-$Pickachu->sayName();
+$Nuzzle->getAttacks();
 
 ?>

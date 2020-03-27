@@ -1,24 +1,37 @@
 <?php
 
-class PokeAttacks extends Pokemon {
+class Attacks{
+	public $name;
+	public $energyType;
+	public $attacks;
 
-    public function __construct($attacks) {
-	    parent::__construct($attacks);
+	public function __construct($name, $energyType, $attacks) {
+	    $this->name = $name;
+	    $this->energyType = $energyType;
+	    $this->attacks = $attacks;
 	}
+
+	public function __toString () {
+	    return json_encode($this);
+	}
+
 }
 
-$PokeAttacks = new PokeAttacks(
-	$attacks = array (
-		$Nuzzle = array(
-			"damage" => "20",
-			"energyType" => "Normal", 
-		),
-
-		$ThunderShock = array(
-			"damage" => "40",
-			"energyType" => "Lightning", 
-		),
-	),
-);
-
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
