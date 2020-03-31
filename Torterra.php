@@ -1,5 +1,12 @@
 <?php
 
+class Torterra extends Pokemon {
+
+    public function __construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance) {
+	    parent::__construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance);
+	}
+}
+
 $Torterra = new Torterra(
 	$name = 'Torterra',
 	$energyType = 'Grass', 
@@ -21,12 +28,5 @@ $Torterra = new Torterra(
 	$weakness = 'fire', 
 	$resistance = 'normal'
 );
-
-class Torterra extends Pokemon {
-
-    public function __construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance) {
-	    parent::__construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance);
-	}
-}
 
 ?>

@@ -31,35 +31,11 @@ class Pokemon {
     	echo '<p>' . $this->health . '</p>';
     }
 
+    /*
     public function getAttacks () {
     	echo '<p>' . $this->energyType . ' ' . $this->attacks . '</p>';
     }
-
+	*/
 }
-
-
-$Nuzzle = new Pokemon (
-	$name = "Nuzzle", 
-	$energyType = "20",
-	$attacks = "Normal", 
-);
-
-$ThunderShock = new Pokemon (
-	$name = "ThunderShock",
-	$attacks = "40",
-	$energyType = "Lightning", 
-);
-
-$MegaDrain = new Pokemon(
-	$name = "MegaDrain",
-	$attacks = "40",
-	$energyType = "Grass", 
-);
-
-$LeafStorm = new Pokemon(
-	$name = "LeafStorm",
-	$attacks = "130",
-	$energyType = "Grass", 
-);
 
 ?>

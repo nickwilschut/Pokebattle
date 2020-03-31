@@ -1,6 +1,6 @@
 <?php
 
-class Attacks{
+class Attack extends Pokemon{
 	public $name;
 	public $energyType;
 	public $attacks;
@@ -15,7 +15,35 @@ class Attacks{
 	    return json_encode($this);
 	}
 
+	public function getAttacks () {
+    	echo '<p>' . $this->energyType . ' ' . $this->attacks . '</p>';
+    }
+
 }
+
+$Nuzzle = new Attack (
+	$name = "Nuzzle", 
+	$energyType = "20",
+	$attacks = "Normal", 
+);
+
+$ThunderShock = new Attack (
+	$name = "ThunderShock",
+	$attacks = "40",
+	$energyType = "Lightning", 
+);
+
+$MegaDrain = new Attack (
+	$name = "MegaDrain",
+	$attacks = "40",
+	$energyType = "Grass", 
+);
+
+$LeafStorm = new Attack (
+	$name = "LeafStorm",
+	$attacks = "130",
+	$energyType = "Grass", 
+);
 
 ?>
 

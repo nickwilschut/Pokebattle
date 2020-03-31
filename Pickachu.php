@@ -5,9 +5,17 @@ $Pickachu = new Pickachu(
 	$energyType = 'Energy', 
 	$hitpoints = '100', 
 	$health = '100', 
-	$attacks = [
-		$ThunderShock
-	],
+	$attacks = array (
+		$Electric_Ring = array (
+			$energyType = "20",
+			$attacks = "Normal", 
+		);
+
+		$Picka_Punch = array (
+			$attacks = "40",
+			$energyType = "Lightning", 
+		);
+	),
 	$weakness = 'water', 
 	$resistance = 'dark'
 );
