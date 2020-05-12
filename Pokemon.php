@@ -1,5 +1,4 @@
 <?php
-
 class Pokemon {
 	public $name;
 	public $energyType;
@@ -8,8 +7,9 @@ class Pokemon {
 	public $attacks;
 	public $weakness;
 	public $resistance;
+	public $executeAttack;
 
-	public function __construct ($name = "Rattata", $energyType = "normal", $hitpoints = "20", $health = "20", $attacks = "10", $weakness = "*", $resistance = null) {  
+	public function __construct ($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance, $executeAttack) {  
 	    $this->name = $name;
 	    $this->energyType = $energyType;
 	    $this->hitpoints = $hitpoints;
@@ -17,6 +17,7 @@ class Pokemon {
 	    $this->attacks = $attacks;
 	    $this->weakness = $weakness;
 	    $this->resistance = $resistance;
+	    $this->executeAttack = $executeAttack;
 	}
 
 	public function __toString () {
@@ -30,12 +31,6 @@ class Pokemon {
     public function getHealth () {
     	echo '<p>' . $this->health . '</p>';
     }
-
-    /*
-    public function getAttacks () {
-    	echo '<p>' . $this->energyType . ' ' . $this->attacks . '</p>';
-    }
-	*/
 }
 
 ?>

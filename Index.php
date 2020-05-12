@@ -10,6 +10,5 @@ print_r('<pre>'. $Pickachu . '</pre>');
 print_r('<pre>'. $Torterra . '</pre>');
 //print_r('<pre>'. $Nuzzle . '</pre>');
 
-$Nuzzle->getAttacks();
 
 ?>
