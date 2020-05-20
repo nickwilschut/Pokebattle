@@ -2,13 +2,12 @@
 
 require 'Pokemon.php';
 require 'Pickachu.php';
-require 'Torterra.php';
-require 'Attacks.php';
-
+require 'Charmeleon.php';
 
 print_r('<pre>'. $Pickachu . '</pre>');
-print_r('<pre>'. $Torterra . '</pre>');
+print_r('<pre>'. $Charmeleon . '</pre>');
 //print_r('<pre>'. $Nuzzle . '</pre>');
+echo $Pickachu->electric_ring();
 
 
 ?>

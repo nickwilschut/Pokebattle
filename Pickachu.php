@@ -1,21 +1,13 @@
 <?php
 
-$Pickachu = new Pickachu(
-	$name = 'Pickachu',
-	$energyType = 'Energy', 
-	$hitpoints = '100', 
-	$health = '100', 
-	$attacks = null,
-	$weakness = 'water', 
-	$resistance = 'dark'
-);
-
 class Pickachu extends Pokemon {
 
-    public function __construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance) {
-	    parent::__construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance);
+    public function __construct($name, $energyType, $hitpoints, $health, $weakness, $resistance, $electric_ring, $pika_punch) {
+	    parent::__construct($name, $energyType, $hitpoints, $health, $weakness, $resistance, $electric_ring, $pika_punch);
 	}
 }
+
+$Pickachu = new Pickachu('Pickachu','Energy','60','60','Fire','Fighting','50','20',);
 
 
 ?>
