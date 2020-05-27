@@ -5,18 +5,12 @@ class Pokemon {
 	public $energyType;
 	public $hitpoints;
 	public $health;
-	public $weakness;
-	public $resistance;
-	public $damage;
 
-	public function __construct ($name, $energyType, $hitpoints, $health, $weakness, $resistance, $damage) {  
+	public function __construct ($name, $energyType, $hitpoints, $health) {  
 	    $this->name = $name;
 	    $this->energyType = $energyType;
 	    $this->hitpoints = $hitpoints;
 	    $this->health = $health;
-	    $this->weakness = $weakness;
-	    $this->resistance = $resistance;
-	    $this->damage = $damage;
 	}
 
 	public function __toString () {
