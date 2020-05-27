@@ -1,14 +1,15 @@
 <?php
 
-require 'Pokemon.php';
-require 'Pickachu.php';
-require 'Charmeleon.php';
-require 'PickachuAttack.php';
-require 'PickachuWeakness.php';
-require 'PickachuResistance.php';
-require 'CharmeleonAttack.php';
-require 'CharmeleonWeakness.php';
-require 'CharmeleonResistance.php';
+// require 'Pokemon.php';
+// require 'Pickachu.php';
+// require 'Charmeleon.php';
+// require 'PickachuAttack.php';
+// require 'PickachuWeakness.php';
+// require 'PickachuResistance.php';
+// require 'CharmeleonAttack.php';
+// require 'CharmeleonWeakness.php';
+// require 'CharmeleonResistance.php';
+require_once 'init.php';
 // require 'ElectricRing.php';
 
 $Pickachu = new Pickachu();
