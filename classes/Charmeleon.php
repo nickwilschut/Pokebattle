@@ -1,5 +1,6 @@
 <?php 
 
+// Create pokemon Charmeleon class.
 class Charmeleon extends Pokemon {
 
 	function __construct() {

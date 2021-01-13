@@ -1,18 +1,15 @@
-<?php
+<?php 
 
-class CharmeleonWeakness extends Charmeleon {
-	
-	public $name;
-	public $amount;
+// Create weakness class for pokemon Charmeleon.
+class CharmeleonWeakness extends Weakness {
 
-	function __construct($name, $amount) {
-		$this->name = $name;
-		$this->amount = $amount;
+	function __construct() {
+		$energytype = 'water';
+		$multiplier = '2';
+		parent::__construct($energytype, $multiplier);
 	}
-
-	public function sayWeakness() {
-        echo '<p>' . $this . '</p>';
-    }
+	
 }
+
 
 ?>

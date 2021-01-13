@@ -1,9 +1,10 @@
 <?php 
 
-class Pickachu extends Pokemon {
+// Create pokemon Charmeleon class.
+class Pikachu extends Pokemon {
 
 	function __construct() {
-		$name = 'Pickachu';
+		$name = 'Pikachu';
 		$energyType = 'Lightning';
 		$hitpoints = '60';
 		$health = '60';

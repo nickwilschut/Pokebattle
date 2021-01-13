@@ -1,5 +1,6 @@
 <?php
 
+// Create Pokemon class
 class Pokemon {
 	public $name;
 	public $energyType;
@@ -17,12 +18,14 @@ class Pokemon {
 	    return json_encode($this);
 	}
 
+	// Function to print out pokemon name.
 	public function sayName() {
         echo '<p>' . $this->name . '</p>';
     }
 
-    public function getHealth() {
-    	echo '<p>' . $this->health . '</p>';
+    // Function to print out pokemon hitpoints.
+    public function getHitpoints() {
+    	return $this->hitpoints;
     }
 }
 
