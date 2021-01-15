@@ -1,8 +1,11 @@
 <?php
+
 // Get init.php for class structure.
 require_once 'init.php';
 
+
 // new pokemons.
+$getPopulation = new Pikachu();
 $Pikachu = new Pikachu();
 $Charmeleon = new Charmeleon();
 
@@ -26,51 +29,37 @@ $CharmeleonWeaknessData = $CharmeleonWeakness->getWeakness();
 $PikachuResistanceData = $PikachuResistance->getResistance();
 $CharmeleonResistanceData = $CharmeleonResistance->getResistance();
 
-// get pokemon hitpoints.
-$PikachuHitpoints = $Pikachu->getHitpoints();
-$CharmeleonHitpoints = $Charmeleon->getHitpoints();
-
 // get Attack hitpoints.
 $ElectricRingAttack = $ElectricRing->getAttack();
 $FlareAttack = $Flare->getAttack();
 
 
 // Pokebattle.
-$ElectricRing->doAttack($ElectricRingAttack, $CharmeleonHitpoints, $CharmeleonWeaknessData, $CharmeleonResistanceData);
-$Flare->doAttack($FlareAttack, $PikachuHitpoints, $PikachuWeaknessData, $PikachuResistanceData);
+
+// Print pokemon hitpoints before battle.
+echo 'Charmeleon has ' . $Charmeleon->hitpoints . ' hitpoints currently.<br>';
+echo 'Pikachu has ' . $Pikachu->hitpoints . ' hitpoints currently.<br><br>';
+
+// Print pokemon hitpoints after battle. 
+$ElectricRingResult = $ElectricRing->doAttack($ElectricRingAttack, $Charmeleon, $Pikachu, $CharmeleonWeaknessData, $CharmeleonResistanceData);
+if ($ElectricRingResult == 'Dead') {
+	unset($Charmeleon);
+	echo 'Charmeleon is dead.<br>';
+} else {
+	echo 'Charmeleon has ' . $ElectricRingResult . ' hitpoints left!<br>';
+}
+
+$FlareResult = $Flare->doAttack($FlareAttack, $Pikachu, $Charmeleon, $PikachuWeaknessData, $PikachuResistanceData);
+if ($FlareResult == 'Dead') {
+	unset($Pikachu);
+	echo 'Pikachu is dead.';
+} else {
+	echo 'Pikachu has ' . $FlareResult . ' hitpoints left!';
+}
 
 
+// Call to getPopulation method to print all alive pokemons.
+echo '<br><br>There are currently ' . $getPopulation->getPopulation() . ' pokemons alive.<br>';
 
 
-/*
-
-
-
-$ElectricRing = new PickachuAttack('ElectricRing', '50');
-$Pickapunch = new PickachuAttack('Pickapunch', '20');
-$PickachuWeakness = new PickachuWeakness('Fire', '* 1,5');
-$PickachuResistance = new PickachuResistance('Fighting', '20');
-
-$Charmeleon = new Charmeleon();
-$Headbutt = new CharmeleonAttack('Headbutt', '10');
-$Flare = new CharmeleonAttack('Pickapunch', '30');
-$CharmeleonWeakness = new CharmeleonWeakness('Water', '* 2');
-$CharmeleonResistance = new CharmeleonResistance('Lightning', '10');
-
-print_r('<pre>'. $Pickachu . '</pre>');
-print_r('<pre>'. $Charmeleon . '</pre>');
-
-$PickachuWeakness->sayWeakness();
-$ElectricRing->sayAttack();
-$Pickapunch->sayAttack();
-$PickachuResistance->sayResistance();
-
-$CharmeleonWeakness->sayWeakness();
-$Headbutt->sayAttack();
-$Flare->sayAttack();
-$CharmeleonResistance->sayResistance();
-// $Pickachu->sayName();
-
-
-*/
 ?>

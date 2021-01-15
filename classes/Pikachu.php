@@ -1,6 +1,6 @@
 <?php 
 
-// Create pokemon Charmeleon class.
+// Create pokemon Pikachu class.
 class Pikachu extends Pokemon {
 
 	function __construct() {
@@ -10,7 +10,6 @@ class Pikachu extends Pokemon {
 		$health = '60';
 		parent::__construct($name, $energyType, $hitpoints, $health);
 	}
-	
 }
 
 

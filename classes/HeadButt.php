@@ -8,7 +8,6 @@ class HeadButt extends Attack {
 		$hitpoints = '10';
 		parent::__construct($name, $hitpoints);
 	}
-	
 }
 
 

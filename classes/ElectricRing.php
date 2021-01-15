@@ -8,7 +8,6 @@ class ElectricRing extends Attack {
 		$hitpoints = '50';
 		parent::__construct($name, $hitpoints);
 	}
-	
 }
 
 

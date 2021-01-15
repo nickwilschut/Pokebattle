@@ -14,10 +14,10 @@ class Resistance {
 	    return json_encode($this);
 	}
 
+	// Function to get the energyType and amount.
 	public function getResistance() {
-    	//echo '<p>' . $this->hitpoints . '</p>';
-    	return $this->energytype;
-    	return $this->amount;
+    	$Weaknessdata = array($this->energytype, $this->amount);
+    	return $Weaknessdata;
     }
 }
 

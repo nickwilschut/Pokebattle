@@ -8,7 +8,6 @@ class PikaPunch extends Attack {
 		$hitpoints = '20';
 		parent::__construct($name, $hitpoints);
 	}
-	
 }
 
 

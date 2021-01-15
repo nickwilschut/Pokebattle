@@ -4,11 +4,10 @@
 class CharmeleonWeakness extends Weakness {
 
 	function __construct() {
-		$energytype = 'water';
+		$energytype = 'Water';
 		$multiplier = '2';
 		parent::__construct($energytype, $multiplier);
 	}
-	
 }
 
 

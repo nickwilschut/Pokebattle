@@ -14,10 +14,10 @@ class Weakness {
 	    return json_encode($this);
 	}
 	
+	// Function to get the energyType and multiplier.
 	public function getWeakness() {
-    	//echo '<p>' . $this->hitpoints . '</p>';
-    	return $this->energytype;
-    	return $this->multiplier;
+		$Weaknessdata = array($this->energytype, $this->multiplier);
+    	return $Weaknessdata;
     }
 }
 

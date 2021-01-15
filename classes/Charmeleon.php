@@ -10,7 +10,6 @@ class Charmeleon extends Pokemon {
 		$health = '60';
 		parent::__construct($name, $energyType, $hitpoints, $health);
 	}
-	
 }
 
 

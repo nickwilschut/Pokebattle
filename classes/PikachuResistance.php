@@ -8,7 +8,6 @@ class PikachuResistance extends Resistance {
 		$amount = '20';
 		parent::__construct($energytype, $amount);
 	}
-	
 }
 
 

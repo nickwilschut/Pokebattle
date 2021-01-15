@@ -1,6 +1,6 @@
 <?php 
 
-// Create attack class for pokemon Pikachu.
+// Create attack class for pokemon Charmeleon.
 class Flare extends Attack {
 
 	function __construct() {
@@ -8,7 +8,6 @@ class Flare extends Attack {
 		$hitpoints = '30';
 		parent::__construct($name, $hitpoints);
 	}
-	
 }
 
 

@@ -1,6 +1,6 @@
 <?php
 
-// Create attacks class.
+// Create Attack class.
 class Attack {
 	public $name;
 	public $hitpoints;
@@ -16,22 +16,28 @@ class Attack {
 
 	// Function to print out pokemon hitpoints.
     public function getAttack() {
-    	//echo '<p>' . $this->hitpoints . '</p>';
     	return $this->hitpoints;
     }
 
-    public function doAttack($damage, $hitpoints, $weakness, $resistance) {
-    	print_r($weakness);
-    	print_r($resistance);
-    	if ($hitpoints > $damage) {
-    		$lefthitpoints = $hitpoints - $damage;
-    		print_r($lefthitpoints);
-    	} else {
-    		print_r('dead');
-    	}
+    // Function to calculate the left hitpoints of the pokemon.
+    public function doAttack($damage, $defendingPokemon, $attackingPokemon, $weakness, $resistance) {
+        // calculate totaldamage with pokemonweakness.
+        if ($attackingPokemon->energyType == $weakness[0]) {
+            $totaldamage = $damage * $weakness[1];
+        }
 
-    	//return $this->damage;
-    	//return $this->hitpoints;
+        // calculate totaldamage with pokemonresistance.
+        if ($attackingPokemon->energyType == $resistance[0]) {
+            $totaldamage = $damage - $resistance[1];
+        }
+
+        // calculate leftover hitpoints of the defending pokemon.
+    	if ($defendingPokemon->hitpoints > $totaldamage) {
+    		$lefthitpoints = $defendingPokemon->hitpoints - $totaldamage;
+            return $lefthitpoints;
+    	} else {
+            return 'Dead';
+    	}
     }
 }
 

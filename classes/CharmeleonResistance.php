@@ -8,7 +8,6 @@ class CharmeleonResistance extends Resistance {
 		$amount = '10';
 		parent::__construct($energytype, $amount);
 	}
-	
 }
 
 
