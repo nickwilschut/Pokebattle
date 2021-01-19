@@ -10,10 +10,6 @@ class Attack {
 	    $this->hitpoints = $hitpoints;
 	}
 
-	public function __toString () {
-	    return json_encode($this);
-	}
-
 	// Function to print out pokemon hitpoints.
     public function getAttack() {
     	return $this->hitpoints;

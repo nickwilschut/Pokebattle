@@ -9,10 +9,6 @@ class Weakness {
 	    $this->energytype = $energytype;
 	    $this->multiplier = $multiplier;
 	}
-
-	public function __toString () {
-	    return json_encode($this);
-	}
 	
 	// Function to get the energyType and multiplier.
 	public function getWeakness() {

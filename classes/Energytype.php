@@ -9,10 +9,6 @@ class EnergyType {
 	    $this->name = $name;
 	    $this->amount = $amount;
 	}
-
-	public function __toString () {
-	    return json_encode($this);
-	}
 }
 
 

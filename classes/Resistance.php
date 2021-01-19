@@ -10,10 +10,6 @@ class Resistance {
 	    $this->amount = $amount;
 	}
 
-	public function __toString () {
-	    return json_encode($this);
-	}
-
 	// Function to get the energyType and amount.
 	public function getResistance() {
     	$Weaknessdata = array($this->energytype, $this->amount);
