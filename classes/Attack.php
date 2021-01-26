@@ -1,11 +1,11 @@
 <?php
 
 // Create Attack class.
-class Attack {
+class Attack extends Pokemon {
 	public $name;
 	public $hitpoints;
 
-	public function __construct ($name, $hitpoints) {  
+	protected function __construct ($name, $hitpoints) {  
 	    $this->name = $name;
 	    $this->hitpoints = $hitpoints;
 	}
@@ -16,15 +16,15 @@ class Attack {
     }
 
     // Function to calculate the left hitpoints of the pokemon.
-    public function doAttack($damage, $defendingPokemon, $attackingPokemon, $weakness, $resistance) {
+    public function doAttack($damage, $defendingPokemon, $attackingPokemon) {
         // calculate totaldamage with pokemonweakness.
-        if ($attackingPokemon->energyType == $weakness[0]) {
-            $totaldamage = $damage * $weakness[1];
+        if ($attackingPokemon->energyType == $defendingPokemon->weaknessEnergyType) {
+            $totaldamage = $damage * $defendingPokemon->weaknessMultiplier;
         }
 
         // calculate totaldamage with pokemonresistance.
-        if ($attackingPokemon->energyType == $resistance[0]) {
-            $totaldamage = $damage - $resistance[1];
+        if ($attackingPokemon->energyType == $defendingPokemon->resistanceEnergyType) {
+            $totaldamage = $damage - $defendingPokemon->resistanceAmount;
         }
 
         // calculate leftover hitpoints of the defending pokemon.

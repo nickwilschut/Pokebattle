@@ -3,18 +3,26 @@
 // Create Pokemon class
 class Pokemon {
 
-	public static $count=-1;
+	private static $count=0;
 
 	public $name;
 	public $energyType;
 	public $hitpoints;
 	public $health;
+	public $resistanceEnergyType;
+	public $resistanceAmount;
+	public $weaknessEnergyType;
+	public $weaknessMultiplier;
 
-	public function __construct ($name, $energyType, $hitpoints, $health) {  
+	protected function __construct ($name, $energyType, $hitpoints, $health, $resistanceEnergyType, $resistanceAmount, $weaknessEnergyType, $weaknessMultiplier) {  
 	    $this->name = $name;
 	    $this->energyType = $energyType;
 	    $this->hitpoints = $hitpoints;
 	    $this->health = $health;
+	    $this->resistanceEnergyType = $resistanceEnergyType;
+	    $this->resistanceAmount = $resistanceAmount;
+	    $this->weaknessEnergyType = $weaknessEnergyType;
+	    $this->weaknessMultiplier = $weaknessMultiplier;
 	    pokemon::$count++;
 		return true;
 	}
@@ -28,13 +36,8 @@ class Pokemon {
 	    return json_encode($this);
 	}
 
-    // Function to print out pokemon hitpoints.
-    public function getHitpoints() {
-    	return $this->hitpoints;
-    }
-
     // Fuction to get all alive pokemons
-	public function getPopulation() {
+	public static function getPopulation() {
 		return pokemon::$count;
     }
 }

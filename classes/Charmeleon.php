@@ -8,7 +8,11 @@ class Charmeleon extends Pokemon {
 		$energyType = 'Fire';
 		$hitpoints = '60';
 		$health = '60';
-		parent::__construct($name, $energyType, $hitpoints, $health);
+		$resistanceEnergyType = 'Lightning';
+		$resistanceAmount = '10';
+		$weaknessEnergyType = 'Water';
+		$weaknessMultiplier = '2';
+		parent::__construct($name, $energyType, $hitpoints, $health, $resistanceEnergyType, $resistanceAmount, $weaknessEnergyType, $weaknessMultiplier);
 	}
 }
 
