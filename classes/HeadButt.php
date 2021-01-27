@@ -1,12 +1,14 @@
 <?php 
 
 // Create attack class for pokemon Charmeleon.
-class HeadButt extends Attack {
+class HeadButt extends Charmeleon {
 
-	function __construct() {
-		$name = 'HeadButt';
-		$hitpoints = '10';
-		parent::__construct($name, $hitpoints);
+	public $name;
+	public $hitpoints;
+
+	public function __construct () {  
+	    $this->name = 'HeadButt';
+	    $this->hitpoints = '10';
 	}
 }
 

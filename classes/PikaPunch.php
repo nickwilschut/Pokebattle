@@ -1,12 +1,14 @@
 <?php 
 
 // Create attack class for pokemon Pikachu.
-class PikaPunch extends Attack {
+class PikaPunch extends Pikachu {
 
-	function __construct() {
-		$name = 'PickPunch';
-		$hitpoints = '20';
-		parent::__construct($name, $hitpoints);
+	public $name;
+	public $hitpoints;
+
+	public function __construct () {  
+	    $this->name = 'PikaPunch';
+	    $this->hitpoints = '20';
 	}
 }
 
