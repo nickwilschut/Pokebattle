@@ -17,7 +17,6 @@ $FlareAttack = $Flare->getAttack();
 
 
 // Pokebattle.
-
 // Print Charmeleon hitpoints before battle.
 echo 'Charmeleon has ' . $Charmeleon->hitpoints . ' hitpoints currently.<br> Pikachu attacks Charmeleon with ' . $ElectricRing->name . '. The attack hitpoints are: ' . $ElectricRing->hitpoints . '.<br>';
 echo 'Charmeleon has a resistance for ' . $Charmeleon->resistanceEnergyType .  ', with an amount of: ' . $Charmeleon->resistanceAmount . '.<br>';
@@ -29,12 +28,11 @@ $ElectricRingResult = $ElectricRing->doAttack($ElectricRingAttack, $Charmeleon, 
 if ($ElectricRingResult == 'Dead') {
 	unset($Charmeleon);
 	echo 'Charmeleon is dead.<br>';
+	?><img src="images/DeadCharmeleon.png"><br><br><?php
 } else {
-	echo 'Charmeleon has ' . $ElectricRingResult . ' hitpoints left!<br><br>';
+	echo 'Charmeleon has ' . $ElectricRingResult . ' hitpoints left!<br>';
+	?><img src="images/Charmeleon.png"><br><br><?php
 }
-
-
-
 
 // Print Pikachu hitpoints before battle.
 echo 'Pikachu has ' . $Pikachu->hitpoints . ' hitpoints currently.<br> Charmeleon attacks Pikachu with ' . $Flare->name . '. The attack hitpoints are: ' . $Flare->hitpoints . '.<br>';
@@ -45,9 +43,11 @@ echo 'Pikachu has a weakness for ' . $Pikachu->weaknessEnergyType .  ', with an 
 $FlareResult = $Flare->doAttack($FlareAttack, $Pikachu, $Charmeleon, $PikachuWeaknessData, $PikachuResistanceData);
 if ($FlareResult == 'Dead') {
 	unset($Pikachu);
-	echo 'Pikachu is dead.';
+	echo 'Pikachu is dead.<br>';
+	?><img src="images/DeadPikachu.png"><br><?php
 } else {
 	echo 'Pikachu has ' . $FlareResult . ' hitpoints left!';
+	?><br><img src="images/Pikachu.png"><?php
 }
 
 
