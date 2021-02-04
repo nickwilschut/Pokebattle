@@ -6,6 +6,7 @@ class Pokemon {
 	private static $count=0;
 
 	public $name;
+	public $attack = [];
 	public $energyType;
 	public $hitpoints;
 	public $health;
@@ -14,8 +15,9 @@ class Pokemon {
 	public $weaknessEnergyType;
 	public $weaknessMultiplier;
 
-	protected function __construct ($name, $energyType, $hitpoints, $health, $resistanceEnergyType, $resistanceAmount, $weaknessEnergyType, $weaknessMultiplier) {  
+	protected function __construct ($name, $attack, $energyType, $hitpoints, $health, $resistanceEnergyType, $resistanceAmount, $weaknessEnergyType, $weaknessMultiplier) {  
 	    $this->name = $name;
+	    $this->attack = $attack;
 	    $this->energyType = $energyType;
 	    $this->hitpoints = $hitpoints;
 	    $this->health = $health;
