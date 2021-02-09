@@ -5,15 +5,15 @@ class Pokemon {
 
 	private static $count=0;
 
-	public $name;
-	public $attack = [];
-	public $energyType;
-	public $hitpoints;
-	public $health;
-	public $resistanceEnergyType;
-	public $resistanceAmount;
-	public $weaknessEnergyType;
-	public $weaknessMultiplier;
+	private $name;
+	private $attack = [];
+	private $energyType;
+	private $hitpoints;
+	private $health;
+	private $resistanceEnergyType;
+	private $resistanceAmount;
+	private $weaknessEnergyType;
+	private $weaknessMultiplier;
 
 	protected function __construct ($name, $attack, $energyType, $hitpoints, $health, $resistanceEnergyType, $resistanceAmount, $weaknessEnergyType, $weaknessMultiplier) {  
 	    $this->name = $name;
@@ -29,22 +29,17 @@ class Pokemon {
 		return true;
 	}
 
+	public function __get($name) {
+      	return $this->$name;
+  	}
 
 	public function __destruct () {
 		pokemon::$count--;
 	}
 
-	public function __toString () {
-	    return json_encode($this);
-	}
-
     // Fuction to get all alive pokemons
 	public static function getPopulation() {
 		return pokemon::$count;
-    }
-    // Function to print out pokemon hitpoints.
-    public function getAttack() {
-    	return $this->hitpoints;
     }
 
     // Function to calculate the left hitpoints of the pokemon.
